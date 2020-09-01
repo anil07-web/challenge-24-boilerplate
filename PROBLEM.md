@@ -17,9 +17,10 @@ Write a Java program to enable the operations team of the school to enter marks 
 
 The marks in each of the subject should be taken as input from the user and stored. Please note that the marks scored can have up to two digits after the decimal point.
 4.	The application should be able:
-    - Find the total marks scored by each student and store them.
-    - Find the top scorer in the class and display his name and Roll Number on the screen.
-    - Find the average marks of the students in the class in each subject and store them.
+
+- Find the total marks scored by each student and store them.
+- Find the top scorer in the class and display his name and Roll Number on the screen.
+- Find the average marks of the students in the class in each subject and store them.
 - Find the number of students who have cleared the examination and display their name and Roll No.
 
 ### Task 2
