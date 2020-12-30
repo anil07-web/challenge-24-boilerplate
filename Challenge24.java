@@ -1,45 +1,52 @@
 import java.util.Scanner;
-public class Challenge24 {
-       static float sum=0,hig=0;
-       static  int n,index=0;
-       static String []stn=new String[100];
-       static  int []rl=new int[100];
-       static  float []math=new float[100];
-       static  float []sci=new float[100];
-       static  float []eng=new float[100];
-       static   float []lang=new float[100];
-       static   float []ss=new float[100];
-       static float []total=new float[100];
-       static float []avg=new float[100];
-       static char  []grade=new char[100];
-       static  int count=0;
-    public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
-        System.out.println("The number of students");
-        n=obj.nextInt();
-        for(int i=0;i<n;i++){
-        System.out.println("Enter the student name");
-        stn[i]=obj.next();
-        System.out.println("Enter the his/her Roll NUmber");
-        rl[i]=obj.nextInt();
-        System.out.println("Enter the his/her Marks in math");
-        math[i]=obj.nextFloat();
-        System.out.println("Enter the his/her Marks in Science");
-        sci[i]=obj.nextFloat();
-        System.out.println("Enter the his/her Marks in English");
-        eng[i]=obj.nextFloat();
-        System.out.println("Enter the his/her Marks in Language");
-        lang[i]=obj.nextFloat();
-        System.out.println("Enter the his/her Marks in Social Studies");
-        ss[i]=obj.nextFloat();
-        } 
-        Challenge24 object = new Challenge24();
+public class Challenge24 extends Task  {    
+     public static void main(String[] args) { 
+      Challenge24 object = new Challenge24();
+        object.Studetails();
         object.TotalMarks();
         object.Passed();
         object.Reportcard();
-        object.Histogram();
+        object.Histogram();          
+    } 
+  }
+
+class Task {
+  float sum=0,hig=0;
+  int n,index=0;
+  String []stn=new String[100];
+  int []rl=new int[100];
+  float []math=new float[100];
+  float []sci=new float[100];
+  float []eng=new float[100];
+  float []lang=new float[100];
+  float []ss=new float[100];
+  float []total=new float[100];
+  float []avg=new float[100];
+  char  []grade=new char[100];
+  int count=0;
+    Scanner obj = new Scanner(System.in);
+    public void Studetails() {
+    System.out.println("The number of students");
+    n=obj.nextInt();
+    for(int i=0;i<n;i++){
+    System.out.println("Enter the student name");
+    stn[i]=obj.next();
+    System.out.println("Enter the his/her Roll NUmber");
+    rl[i]=obj.nextInt();
+    System.out.println("Enter the his/her Marks in math");
+    math[i]=obj.nextFloat();
+    System.out.println("Enter the his/her Marks in Science");
+    sci[i]=obj.nextFloat();
+    System.out.println("Enter the his/her Marks in English");
+    eng[i]=obj.nextFloat();
+    System.out.println("Enter the his/her Marks in Language");
+    lang[i]=obj.nextFloat();
+    System.out.println("Enter the his/her Marks in Social Studies");
+    ss[i]=obj.nextFloat();
     }
-        public void TotalMarks() {
+ }
+    
+      public void TotalMarks() {
         System.out.println("Studentname");
         for(int j=0;j<n;j++){
          total[j]=(math[j]+sci[j]+eng[j]+lang[j]+ss[j]);
@@ -84,7 +91,7 @@ public class Challenge24 {
           System.out.println("\nAverage marks in social studies "+sum/n);
          }
         }
-         public void Passed() {
+      public void Passed() {
          System.out.println("Passed: ");
         System.out.println("Studentname");
          for(int j=0;j<n;j++){
@@ -106,7 +113,7 @@ public class Challenge24 {
         }
         System.out.println("The number of students who needs to mandatorily repeat the examination "+count+"\n");
         }
-        public void Reportcard() {
+      public void Reportcard() {
             System.out.println();
             for(int j=0;j<n;j++){
             avg[j]=total[j]/5;
@@ -161,7 +168,7 @@ public class Challenge24 {
                 System.out.println();
                 }      
                }
-               public void Histogram() {
+            public void Histogram() {
                 int i=0;
                 for(int j=0;j<n;j++){
                 total[j]=(math[j]+sci[j]+eng[j]+lang[j]+ss[j]);
@@ -269,7 +276,5 @@ public class Challenge24 {
                 for(int j=0;j<n;j++){
                 System.out.print(rl[j]+"  ");
                 }
-             } 
-                   
-            
+             }            
 }
